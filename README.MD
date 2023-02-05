@@ -1,0 +1,1 @@
+### Django Solution for Quera Django questions
