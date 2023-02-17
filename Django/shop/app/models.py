@@ -1,6 +1,11 @@
 from django.db import models
 
 
+class AvailableManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(stock__gt=0)
+
+
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
@@ -16,6 +21,9 @@ class Product(models.Model):
     stock = models.PositiveIntegerField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    objects = models.Manager()
+    available = AvailableManager()
 
     def __str__(self):
         return self.name
