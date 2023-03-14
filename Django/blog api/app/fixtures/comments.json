@@ -1,0 +1,79 @@
+[
+{
+    "model": "app.comment",
+    "pk": 1,
+    "fields": {
+        "body": "admin_post_1_comment",
+        "created": "2018-07-18T11:28:47.400Z",
+        "updated": "2018-07-18T11:28:47.401Z",
+        "post": 1,
+        "owner": 2
+    }
+},
+{
+    "model": "app.comment",
+    "pk": 4,
+    "fields": {
+        "body": "admin_post_1_comment",
+        "created": "2018-07-18T11:30:32.504Z",
+        "updated": "2018-07-18T11:30:32.504Z",
+        "post": 1,
+        "owner": 3
+    }
+},
+{
+    "model": "app.comment",
+    "pk": 5,
+    "fields": {
+        "body": "admin_post_2_comment",
+        "created": "2018-07-18T11:30:52.618Z",
+        "updated": "2018-07-18T11:30:52.618Z",
+        "post": 2,
+        "owner": 2
+    }
+},
+{
+    "model": "app.comment",
+    "pk": 6,
+    "fields": {
+        "body": "amir_post_1_comment",
+        "created": "2018-07-18T11:31:14.368Z",
+        "updated": "2018-07-18T11:31:14.368Z",
+        "post": 5,
+        "owner": 1
+    }
+},
+{
+    "model": "app.comment",
+    "pk": 7,
+    "fields": {
+        "body": "hamid_post_1_comment",
+        "created": "2018-07-18T11:31:40.183Z",
+        "updated": "2018-07-18T11:31:40.183Z",
+        "post": 3,
+        "owner": 1
+    }
+},
+{
+    "model": "app.comment",
+    "pk": 8,
+    "fields": {
+        "body": "hamid_post_1_comment",
+        "created": "2018-07-18T11:32:01.712Z",
+        "updated": "2018-07-18T11:32:01.712Z",
+        "post": 3,
+        "owner": 2
+    }
+},
+{
+    "model": "app.comment",
+    "pk": 9,
+    "fields": {
+        "body": "hamid_post_2_comment",
+        "created": "2018-07-18T11:32:21.566Z",
+        "updated": "2018-07-18T11:32:21.567Z",
+        "post": 2,
+        "owner": 3
+    }
+}
+]
