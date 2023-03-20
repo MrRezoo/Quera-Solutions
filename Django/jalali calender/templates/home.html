@@ -1,0 +1,9 @@
+<html>
+  <body>  
+    {% for b in object_list %}
+        <h2>{{ b.full_name }}</h2>
+        <p>{{ b.birthday_date }}</p>
+        <p>{{ b.ceremony_datetime }}</p>
+    {% endfor %}  
+  </body>
+</html>
