@@ -10,6 +10,7 @@ model-bakery = "*"
 [dev-packages]
 django-extensions = "*"
 ipython = "*"
+black = "*"
 
 [requires]
 python_version = "3.11"

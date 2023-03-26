@@ -17,7 +17,7 @@ class BlogPost(models.Model):
         new_post.save()
         for comment in self.comment_set.values('text'):
             Comment(**comment, blog_post=new_post).save()
-        return new_post.id
+        return new_post.id 
 
 
 class Comment(models.Model):
