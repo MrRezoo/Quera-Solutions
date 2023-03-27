@@ -1,8 +1,10 @@
-
-  
 ### Django Solution for Quera Django questions
 
-OrderBy : number of success submission
+Order By : number of success submission
+
+```
+If you would like to see document of each question click on below links
+```
 
 - [Blog](https://quera.org/problemset/14742/)
 - [PostCard](https://quera.org/problemset/21210/)
