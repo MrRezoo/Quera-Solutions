@@ -9,15 +9,15 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'username',
-            'password',
-            'full_name',
-            'phone',
-            'address',
-            'gender',
-            'age',
-            'description',
-            'email',
+            "username",
+            "password",
+            "full_name",
+            "phone",
+            "address",
+            "gender",
+            "age",
+            "description",
+            "email",
         )
 
     def create(self, validated_data):

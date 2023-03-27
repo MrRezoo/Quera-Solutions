@@ -11,5 +11,5 @@ class Contest(models.Model):
     is_monetary = models.BooleanField(default=False)
     price = models.PositiveIntegerField(default=0)
     problems = models.ManyToManyField(Problem)
-    authors = models.ManyToManyField(User, related_name='authors')
-    participants = models.ManyToManyField(User, related_name='participants')
+    authors = models.ManyToManyField(User, related_name="authors")
+    participants = models.ManyToManyField(User, related_name="participants")
