@@ -26,7 +26,6 @@ def list_seats(request, movie_id):
 def reserve_seat(request, movie_id, seat_id):
     if not request.user.is_authenticated:
         next_url = reverse('list_seats', args=[movie_id])
-        request.session['next'] = next_url
         # redirect to login page with next url list_seats
         return redirect(reverse('login') + '?next=' + next_url)
 
@@ -43,7 +42,10 @@ def stats(request):
     if not request.user.is_superuser:
         return HttpResponseForbidden()
     stats = Ticket.objects.values('seat__number').annotate(total=Count('seat__number'))
-    return JsonResponse(list(stats), safe=False)
+
+    return JsonResponse(
+        {"stats": list(stats)}
+    )
 
 
 def signup(request):
@@ -55,9 +57,7 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            # Redirect the user to the next page after successful login
-            next_page = request.session.get('next', '/')
-            return redirect(next_page)
+            return redirect("list_movies")
     else:
         form = UserCreationForm()
 
