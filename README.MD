@@ -1,6 +1,6 @@
 ### Django Solution for Quera Django questions
 
-Order By : number of success submission
+Order By : number of submissions with full marks
 
 ```
 If you would like to see document of each question click on below links
