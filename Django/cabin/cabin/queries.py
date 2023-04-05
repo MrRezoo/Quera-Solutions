@@ -99,9 +99,15 @@ def query_11(n, c):
 
 
 def query_12(n, c):
-    car_with_color_c = Car.objects.filter(color=c).values('driver')
-    car_with_model_n_or_above = Car.objects.filter(model__gte=n).values('driver')
-    q = Driver.objects.filter(car__in=car_with_color_c).filter(car__in=car_with_model_n_or_above).distinct()
+    """
+    :param n: model of car
+    :param c: color of car
+    :return: List of drivers who have at least one car with color c and one car model n or above
+    These two cars are not necessarily the same.
+    """
+    q1 = Driver.objects.filter(car__model__gte=n).distinct()
+    q2 = Driver.objects.filter(car__color=c).distinct()
+    q = q1.intersection(q2)
     return q
 
 
