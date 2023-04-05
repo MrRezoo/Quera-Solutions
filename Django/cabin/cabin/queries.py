@@ -1,4 +1,4 @@
-from django.db.models import Sum, IntegerField, Count
+from django.db.models import Sum, IntegerField, Count, Q
 from django.db.models.functions import Coalesce
 
 from .models import *
@@ -67,37 +67,49 @@ def query_7():
     :return: A list of all passengers who had at least one trip in a class A car, with an additional column
     named n indicating the number of trips each passenger has had in a class A car.
     """
-    q = Rider.objects.filter(riderequest__car_type="A").annotate(n=Count("riderequest__ride"))
+    q = Rider.objects.filter(riderequest__ride__car__car_type="A").annotate(
+        n=Count(
+            "riderequest__ride",
+            filter=Q(riderequest__ride__car__car_type='A')
+        )
+    )
     return q
 
 
 def query_8(x):
-    q = 'your query here'
+    q = Driver.objects.filter(car__model__gte=x).values('account__email').distinct()
     return q
 
 
 def query_9():
-    q = 'your query here'
+    q = Driver.objects.annotate(n=Count("car__ride"))
     return q
 
 
 def query_10():
-    q = 'your query here'
+    q = Driver.objects.filter(account__drivers__isnull=False).values('account__first_name').annotate(
+        n=Count('account__drivers__car__ride')
+    )
     return q
 
 
 def query_11(n, c):
-    q = 'your query here'
+    q = Driver.objects.filter(car__color=c, car__model__gte=n).distinct()
     return q
 
 
 def query_12(n, c):
-    q = 'your query here'
+    car_with_color_c = Car.objects.filter(color=c).values('driver')
+    car_with_model_n_or_above = Car.objects.filter(model__gte=n).values('driver')
+    q = Driver.objects.filter(car__in=car_with_color_c).filter(car__in=car_with_model_n_or_above).distinct()
     return q
 
 
 def query_13(n, m):
-    q = 'your query here'
+    q = Ride.objects.filter(car__owner__account__first_name=n,
+                            request__rider__account__first_name=m).aggregate(
+        sum_duration=Sum('dropoff_time') - Sum('pickup_time'))
+
     return q
 
 
