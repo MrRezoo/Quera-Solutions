@@ -17,3 +17,5 @@ If you would like to see document of each question click on below links
 - [Cinema](https://quera.org/problemset/129725/)
 - [Quera Contest](https://quera.org/problemset/102251/)
 - [Quera Collect](https://quera.org/problemset/102249/)
+- [Querashop Queries](https://quera.org/problemset/190990/)
+- 
