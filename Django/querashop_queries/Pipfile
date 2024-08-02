@@ -4,12 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
-
-[dev-packages]
 django-extensions = "*"
 ipython = "*"
-django-debug-toolbar = "*"
+django = "<5,>=4.1"
+model-bakery = "*"
+rich = "*"
+
+[dev-packages]
 
 [requires]
 python_version = "3.12"

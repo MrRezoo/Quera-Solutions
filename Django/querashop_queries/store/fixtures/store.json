@@ -1,0 +1,302 @@
+[
+  {
+    "model": "store.company",
+    "pk": 1,
+    "fields": {
+      "name": "Minoo",
+      "phone": "02148830",
+      "email": "info@minoogroup.com"
+    }
+  },
+  {
+    "model": "store.company",
+    "pk": 2,
+    "fields": {
+      "name": "Alis",
+      "phone": "0513187",
+      "email": "info@alis.ir"
+    }
+  },
+  {
+    "model": "store.company",
+    "pk": 3,
+    "fields": {
+      "name": "Dina",
+      "phone": "02188190773",
+      "email": "crm@dinafood.com"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+      "name": "Saaghe Talaei",
+      "company": 1,
+      "price": 14300,
+      "amount": 247,
+      "discount": 0,
+      "sold": 53
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+      "name": "Pofak Namaki",
+      "company": 1,
+      "price": 27000,
+      "amount": 150,
+      "discount": 0,
+      "sold": 300
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+      "name": "Choob Shoor",
+      "company": 1,
+      "price": 3000,
+      "amount": 100,
+      "discount": 0,
+      "sold": 200
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+      "name": "Doogh Nanaei",
+      "company": 2,
+      "price": 34000,
+      "amount": 200,
+      "discount": 10,
+      "sold": 60
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+      "name": "Doogh 8Giah",
+      "company": 2,
+      "price": 35400,
+      "amount": 100,
+      "discount": 10,
+      "sold": 30
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+      "name": "Doogh Sonnati",
+      "company": 2,
+      "price": 36000,
+      "amount": 100,
+      "discount": 15,
+      "sold": 45
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+      "name": "Lemonade",
+      "company": 2,
+      "price": 23000,
+      "amount": 100,
+      "discount": 5,
+      "sold": 63
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+      "name": "Cheepellet",
+      "company": 3,
+      "price": 12000,
+      "amount": 300,
+      "discount": 20,
+      "sold": 150
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+      "name": "Popcorn",
+      "company": 3,
+      "price": 24000,
+      "amount": 200,
+      "discount": 0,
+      "sold": 77
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "name": "Cheepuff",
+      "company": 3,
+      "price": 8000,
+      "amount": 150,
+      "discount": 5,
+      "sold": 53
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 11,
+    "fields": {
+      "name": "Cheeflex",
+      "company": 3,
+      "price": 58200,
+      "amount": 270,
+      "discount": 10,
+      "sold": 27
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 12,
+    "fields": {
+      "name": "Kettle Chips",
+      "company": 3,
+      "price": 30000,
+      "amount": 150,
+      "discount": 0,
+      "sold": 80
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 13,
+    "fields": {
+      "name": "Pofak Talaei",
+      "company": 3,
+      "price": 12000,
+      "amount": 250,
+      "discount": 0,
+      "sold": 100
+    }
+  },
+  {
+    "model": "store.employee",
+    "pk": 1,
+    "fields": {
+      "first_name": "Ali",
+      "last_name": "Alipour",
+      "age": 24,
+      "job": "Cashier"
+    }
+  },
+  {
+    "model": "store.employee",
+    "pk": 2,
+    "fields": {
+      "first_name": "Negar",
+      "last_name": "Mohammadi",
+      "age": 25,
+      "job": "Cashier"
+    }
+  },
+  {
+    "model": "store.employee",
+    "pk": 3,
+    "fields": {
+      "first_name": "Taher",
+      "last_name": "Gholipour",
+      "age": 30,
+      "job": "Custodian"
+    }
+  },
+  {
+    "model": "store.employee",
+    "pk": 4,
+    "fields": {
+      "first_name": "Mina",
+      "last_name": "Rahmani",
+      "age": 27,
+      "job": "Custodian"
+    }
+  },
+  {
+    "model": "store.customer",
+    "pk": 1,
+    "fields": {
+      "name": "Ali Moradi",
+      "phone": "09121234567",
+      "level": "N"
+    }
+  },
+  {
+    "model": "store.customer",
+    "pk": 2,
+    "fields": {
+      "name": "Elham Karaji",
+      "phone": "09192345678",
+      "level": "N"
+    }
+  },
+  {
+    "model": "store.customer",
+    "pk": 3,
+    "fields": {
+      "name": "Mohammad Dashti",
+      "phone": "09335678910",
+      "level": "G"
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "customer": 2,
+      "time": "2023-07-20T17:41:28+03:30",
+      "price": 14300
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 2,
+    "fields": {
+      "product": 3,
+      "customer": 2,
+      "time": "2023-07-20T17:41:28+03:30",
+      "price": 3000
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 3,
+    "fields": {
+      "product": 5,
+      "customer": 1,
+      "time": "2023-07-19T13:41:30+03:30",
+      "price": 31860
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 4,
+    "fields": {
+      "product": 10,
+      "customer": 1,
+      "time": "2023-06-20T20:50:30+03:30",
+      "price": 8000
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 5,
+    "fields": {
+      "product": 8,
+      "customer": 3,
+      "time": "2023-07-15T11:06:00+03:30",
+      "price": 12000
+    }
+  }
+]
