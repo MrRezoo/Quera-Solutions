@@ -18,6 +18,7 @@ If you would like to see the document of each question, click on the links below
 - [Migration](https://quera.org/problemset/129727/)
 - [Cinema](https://quera.org/problemset/129725/)
 - [Quera Contest](https://quera.org/problemset/102251/)
+- [Classroom] (https://quera.org/problemset/190989)
 
 #### Golang questions
 
