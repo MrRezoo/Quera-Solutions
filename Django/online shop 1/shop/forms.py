@@ -15,7 +15,7 @@ class CartForm(forms.Form):
             )
             self.fields[f'color_{item.id}'] = forms.ChoiceField(
                 label='color',
-                choices=[(color.id, color.name) for color in item.colors_available.all()],
+                choices=[(color.name, color.name) for color in item.colors_available.all()],
                 required=False
             )
 
@@ -27,7 +27,7 @@ class CartForm(forms.Form):
             if field.startswith('color_') and not cleaned_data.get(field):
                 product_id = field.split('_')[1]
                 product = Product.objects.get(id=product_id)
-                colors = product.colors_available.all()
-                if colors.exists():
-                    cleaned_data[field] = colors.order_by('name').first().id
+                colors = product.colors_available.all().order_by('name')
+                if colors:
+                    cleaned_data[field] = colors.first().name
         return cleaned_data
