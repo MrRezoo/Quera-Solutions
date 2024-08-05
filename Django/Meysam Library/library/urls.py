@@ -15,11 +15,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import borrow_book, get_book_users, return_book
+from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get_book_users/<int:book_id>/', get_book_users, name='get_book_users'),
-    path('borrow_book/<book_id>/<user_name>/', borrow_book, name='borrow_book'),
-    path('return_book/<book_id>/', return_book, name='return_book'),
+    path('get_book_users/<int:book_id>/', views.get_book_users, name='get_book_users'),
+    path('borrow_book/<int:book_id>/<str:user_name>/', views.borrow_book, name='borrow_book'),
+    path('return_book/<int:book_id>/', views.return_book, name='return_book'),
 ]
