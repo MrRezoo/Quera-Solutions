@@ -27,9 +27,10 @@ def borrow_book(request, book_id, user_name):
         return JsonResponse({"status": 3})
 
     if book.user_borrowed:
-        if book.user_borrowed.username == user_name:
-            return JsonResponse({"status": 2})
         return JsonResponse({"status": 1})
+
+    if Book.objects.filter(user_borrowed=user).exists():
+        return JsonResponse({"status": 2})
 
     book.borrow_book(user)
     return JsonResponse({"status": 0})
