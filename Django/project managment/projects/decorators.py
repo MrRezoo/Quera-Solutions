@@ -13,8 +13,7 @@ class projects_panel(object):
     def __call__(self, view_func):
         @wraps(view_func)
         def _wrapper_view(request, *args, **kwargs):
-            user = request.user
-            memberships = ProjectMembership.objects.filter(user=user)
+            memberships = ProjectMembership.objects.filter(user=request.user)
             if not memberships.exists():
                 return HttpResponseNotFound("No projects found")
 
