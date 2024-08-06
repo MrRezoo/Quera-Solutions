@@ -1,8 +1,8 @@
-import json
-
 from django.http.response import HttpResponse
 from django.shortcuts import render
+
 from .forms import *
+from .models import Product
 
 
 def cart(request):
