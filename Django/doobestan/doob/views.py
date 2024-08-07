@@ -1,3 +1,5 @@
+import asyncio
+
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -51,13 +53,14 @@ def get_sick_employee_by_company(request):
 
 
 @api_view(['POST'])
-async def sms_link(request):
+def sms_link(request):
+    request.META['CONTENT_LENGTH'] = 35
     serializer = NationalIDSerializer(data=request.data)
     if serializer.is_valid():
         national_ids = serializer.validated_data['national_id']
         for national_id in national_ids:
             phone_number = get_phone_number(national_id)
-            await sms(phone_number)
+            asyncio.run(sms(phone_number))
             DeliveryReport.objects.create(phone_number=phone_number)
         return Response(status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

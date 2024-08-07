@@ -25,7 +25,7 @@ If you would like to see the document of each question, click on the links below
 - [online shop](Django/online%20shop%201): `100%` [link](https://quera.org/problemset/14744)
 - [Meysam Library](Django/Meysam%20Library): `100%` [link](https://quera.org/problemset/33475)
 - [project managment](Django/project%20managment): `100%` [link](https://quera.org/problemset/16401)
-- [doobestan](Django/doobestan): `67%` [link](https://quera.org/problemset/76282)
+- [doobestan](Django/doobestan): `100%` [link](https://quera.org/problemset/76282)
 #### Golang questions
 
 - [initial](https://quera.org/problemset/126106/) `100%`
